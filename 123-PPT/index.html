@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Миний презентаци</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- хуудас 1 - Танилцуулга -->
+    <section id="page-1" class="page">
+        <h1>Миний презентацид тавтай морил</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, recusandae esse. Voluptatem placeat quaerat provident eius aliquam molestiae corrupti veniam sed aut quam ipsa, tempore nam ipsam eos vitae similique.
+        </p>
+
+        <div>
+            <a href="#page-2" class="btn">Дараагийн хуудас <i class='bx bxs-down-arrow'></i></a>
+        </div>
+
+    </section>
+
+    <!-- Хуудас 2 -->
+    <section id="page-2" class="page">
+        <h1>Хуудас 2</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, recusandae esse. Voluptatem placeat quaerat provident eius aliquam molestiae corrupti veniam sed aut quam ipsa, tempore nam ipsam eos vitae similique.
+        </p>
+
+        <div>
+            <a href="#page-1" class="btn"><i class='bx bxs-up-arrow'></i></i>Өмнөх хуудас</a>
+            <a href="#page-3" class="btn">Дараагийн хуудас <i class='bx bxs-down-arrow'></i></a>
+        </div>
+    </section>
+
+    <!-- Хуудас 3 -->
+    <section id="page-3" class="page">
+        <h1>Хуудас 3</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, recusandae esse. Voluptatem placeat quaerat provident eius aliquam molestiae corrupti veniam sed aut quam ipsa, tempore nam ipsam eos vitae similique.
+        </p>
+
+        <div>
+            <a href="#page-2" class="btn"><i class='bx bxs-up-arrow'></i>Өмнөх хуудас</a>
+            <a href="#page-4" class="btn">Дараагийн хуудас <i class='bx bxs-down-arrow'></i></a>
+        </div>
+    </section>
+
+    <!-- Хуудас 2 -->
+    <section id="page-4" class="page">
+        <h1>Хуудас 4</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, recusandae esse. Voluptatem placeat quaerat provident eius aliquam molestiae corrupti veniam sed aut quam ipsa, tempore nam ipsam eos vitae similique.
+        </p>
+
+        <div>
+            <a href="#page-3" class="btn"><i class='bx bxs-up-arrow'></i>Өмнөх хуудас</a>
+            <a href="#page-1" class="btn"><i class='bx bxs-up-arrow'></i>Эхний хуудас</a>
+        </div>
+    </section>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous">
+    </script>
+
+    <script>
+        // Smooth scroll
+        $('.btn').on('click', function(event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate ({
+                    scrollTop: $(hash).offset().top
+                }, 800);
+            }});
+    </script>
+
+</body>
+</html>
